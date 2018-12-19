@@ -1,24 +1,24 @@
 {
-  "sqlcl" : "sqlcl",
+  "sqlcl" : "sql",
   "defaults" : {
     "sqlFile" : "table_info.sql",
     "author" : "OOS TAPI",
     "templates" : [
       {
-        "path" : "./templates/package.pks",
-        "outFileName" : "TABLE_NAME.pks"
+        "path" : "./templates/commi235/package.pks",
+        "outFileName" : "PackageHeader/TABLE_NAME_pkg.pks"
       },
       {
-        "path" : "./templates/package.pkb",
-        "outFileName" : "TABLE_NAME.pkb"
+        "path" : "./templates/commi235/package.pkb",
+        "outFileName" : "PackageBodies/TABLE_NAME_pkg.pkb"
       }
     ]
   },
   "projects" : {
-    "giffy" : {
-      "connectionDetails" : "giffy/giffy@localhost:11521/xe",
-      "outputPath" : "./output",
-      "tables" : "emp,dept,  demo_orders"
+    "mt_accelerator" : {
+      "connectionDetails" : "mt_accelerator/mt_accelerator@rtgsrv1oracle2.mt-ag.com:1521/mt_accelerator.mtag.com",
+      "outputPath" : "./output/mt_accelerator",
+      "tables" : "CATEGORIES,CONTRIBUTORS,CONTRIBUTOR_TYPE,FILES,KEYWORDS,LINK_TYPES,MY_USERS,PROJECT,PROJECT_CONVERSATION,PROJECT_KEYWORDS,PROJECT_REFERENCES,PROJECT_TECHNOLOGIES,PROJECT_WATCH,PROJEKT_LINKS,REFERENCE_TYPE,SCHEDULES,TECHNOLOGIES,WATCHLIST,WORKFLOW_CONFIG,WORKFLOW_STATUS"
     }
   }
 }

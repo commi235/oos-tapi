@@ -19,13 +19,10 @@ if (args.length !== 1){
 }
 
 var config = JSON.parse(fs.readFileSync(path.resolve(__dirname + '/config.json'),'utf8'));
-
 var project = config.projects[args[0]];
 project = extend(true, {}, config.defaults, project);
 
 project.templateContent = {};
-
-
 
 // Generate SQL friendly list of Table Names
 var tablesSql = project.tables.split(',');
